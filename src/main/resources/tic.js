@@ -178,3 +178,41 @@ function StepPlayer(element,number){
 
     myfunc();
 }
+
+function SaveGame(){
+    $.ajax({
+        url: "http://localhost:8080/tictactoe/post",
+        type:'POST',
+        contentType:"application/json;charset=utf-8",
+        data:JSON.stringify(arr),
+        success:function (data) {
+            window.alert('SUCCESS');
+        },
+        error:function (e) {
+            window.alert('ERROR');
+
+        }
+    })
+}
+
+function GetGame(){
+    $.ajax({
+        url: "http://localhost:8080/tictactoe/get",
+        type: 'GET',
+        dataType:'json',
+        success: function (data) {
+            arr=data;
+            location.reload();
+            document.getElementById('b1').value = arr[0];
+            document.getElementById("b2").value =arr[1];
+            document.getElementById("b3").value = arr[2];
+            document.getElementById("b4").value =arr[3];
+            document.getElementById("b5").value = arr[4];
+            document.getElementById("b6").value = arr[5];
+            document.getElementById("b7").value = arr[6];
+            document.getElementById("b8").value = arr[7];
+            document.getElementById("b9").value = arr[8];
+        }
+
+    })
+}
