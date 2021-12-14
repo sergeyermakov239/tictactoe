@@ -192,7 +192,8 @@ function SaveGame(){
             window.alert('ERROR');
 
         }
-    })
+    });
+    myfunc_2();
 }
 
 function GetGame(){
