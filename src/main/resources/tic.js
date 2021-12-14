@@ -185,7 +185,7 @@ function SaveGame(){
         type:'POST',
         contentType:"application/json;charset=utf-8",
         data:JSON.stringify(arr),
-        success:function (data) {
+        success:function () {
             window.alert('SUCCESS');
         },
         error:function (e) {
@@ -193,7 +193,7 @@ function SaveGame(){
 
         }
     });
-    myfunc_2();
+
 }
 
 function GetGame(){
