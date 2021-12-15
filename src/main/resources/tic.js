@@ -1,6 +1,9 @@
 // Function called whenever user tab on any box
 let arr = ["","","","","","","","",""];
 let f=false;
+
+let b1 =  document.getElementById("b1");
+
 function myfunc() {
 
     // Setting DOM to all boxes or input field
@@ -107,7 +110,7 @@ f=true;
         window.alert('Player 0 won');
     }
     if (f){
-        document.getElementById("b1").disabled = true;
+       b1.disabled = true;
         document.getElementById("b2").disabled = true;
         document.getElementById("b3").disabled = true;
         document.getElementById("b4").disabled = true;
@@ -180,6 +183,7 @@ function StepPlayer(element,number){
 }
 
 function SaveGame(){
+    alert("123");
     $.ajax({
         url: "http://localhost:8080/tictactoe/post",
         type:'POST',
@@ -202,8 +206,8 @@ function GetGame(){
         type: 'GET',
         dataType:'json',
         success: function (data) {
+            alert(data);
             arr=data;
-            location.reload();
             document.getElementById('b1').value = arr[0];
             document.getElementById("b2").value =arr[1];
             document.getElementById("b3").value = arr[2];
