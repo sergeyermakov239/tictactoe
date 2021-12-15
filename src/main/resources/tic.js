@@ -209,14 +209,41 @@ function GetGame(){
             alert(data);
             arr=data;
             document.getElementById('b1').value = arr[0];
+            if (arr[0]!=="X"){
+                document.getElementById('b1').enabled=true;
+            }
             document.getElementById("b2").value =arr[1];
+            if (arr[1]!=="X"){
+                document.getElementById('b2').enabled=true;
+            }
             document.getElementById("b3").value = arr[2];
+            if (arr[2]!=="X"){
+                document.getElementById('b3').enabled=true;
+            }
             document.getElementById("b4").value =arr[3];
+            if (arr[3]!=="X"){
+                document.getElementById('b4').enabled=true;
+            }
             document.getElementById("b5").value = arr[4];
+            if (arr[4]!=="X"){
+                document.getElementById('b5').enabled=true;
+            }
             document.getElementById("b6").value = arr[5];
+            if (arr[5]!=="X"){
+                document.getElementById('b6').enabled=true;
+            }
             document.getElementById("b7").value = arr[6];
+            if (arr[6]!=="X"){
+                document.getElementById('b7').enabled=true;
+            }
             document.getElementById("b8").value = arr[7];
+            if (arr[7]!=="X"){
+                document.getElementById('b8').enabled=true;
+            }
             document.getElementById("b9").value = arr[8];
+            if (arr[8]!=="X"){
+                document.getElementById('b9').enabled=true;
+            }
         }
 
     })
